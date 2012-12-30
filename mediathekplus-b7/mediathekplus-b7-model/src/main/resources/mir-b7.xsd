@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="liveStreamingOrderFeed" type="liveStreamingOrderFeed"/>
+
+  <xs:element name="recordedFilesFeed" type="recordedFilesFeed"/>
+
+  <xs:element name="recordingFeed" type="recordingFeed"/>
+
+  <xs:element name="recordingOrderFeed" type="recordingOrderFeed"/>
+
+  <xs:complexType name="liveStreamingOrderFeed">
+    <xs:complexContent>
+      <xs:extension base="orderFeed">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="orderFeed" abstract="true">
+    <xs:sequence>
+      <xs:element name="order" type="order" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="order">
+    <xs:sequence>
+      <xs:element name="externalId" type="xs:string" minOccurs="0"/>
+      <xs:element name="liveStreaming" type="xs:boolean"/>
+      <xs:element name="deliverRecording" type="xs:boolean"/>
+      <xs:element name="geoprotection" type="geoprotectionTypeEnum" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="recordedFile">
+    <xs:sequence>
+      <xs:element name="type" type="recordedFileTypeEnum" minOccurs="0"/>
+      <xs:element name="path" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="recordedFilesFeed">
+    <xs:sequence>
+      <xs:element name="file" type="recordedFile" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="recording">
+    <xs:sequence>
+      <xs:element name="recordingId" type="xs:long"/>
+      <xs:element name="externalId" type="xs:string" minOccurs="0"/>
+      <xs:element name="title" type="xs:string" minOccurs="0"/>
+      <xs:element name="teaserText" type="xs:string" minOccurs="0"/>
+      <xs:element name="author" type="xs:string" minOccurs="0"/>
+      <xs:element name="broadcastStartDate" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="broadcastEndDate" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="recordingStartDate" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="recordingEndDate" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="trimmingChangedDate" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="trimmingChangedByUser" type="xs:string" minOccurs="0"/>
+      <xs:element name="delivered" type="xs:boolean"/>
+      <xs:element name="files" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="file" type="recordedFile" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="recordingFeed">
+    <xs:sequence>
+      <xs:element name="version" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="recording" type="recording" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="recordingOrderFeed">
+    <xs:complexContent>
+      <xs:extension base="orderFeed">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:simpleType name="geoprotectionTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="WORLDWIDE"/>
+      <xs:enumeration value="EBU"/>
+      <xs:enumeration value="DACH"/>
+      <xs:enumeration value="GERMANY"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="recordedFileTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="WEB_XS_96"/>
+      <xs:enumeration value="WEB_S_144"/>
+      <xs:enumeration value="WEB_M_272"/>
+      <xs:enumeration value="WEB_M_288"/>
+      <xs:enumeration value="WEB_L_360"/>
+      <xs:enumeration value="WEB_L_544"/>
+      <xs:enumeration value="WEB_XL_720"/>
+      <xs:enumeration value="WEB_XL_1080"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+
