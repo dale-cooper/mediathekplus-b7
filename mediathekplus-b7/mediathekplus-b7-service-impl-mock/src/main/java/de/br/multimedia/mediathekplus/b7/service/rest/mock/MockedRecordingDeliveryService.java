@@ -16,10 +16,10 @@ import de.br.multimedia.mediathekplus.b7.model.RecordedFilesFeed;
 import de.br.multimedia.mediathekplus.b7.model.Recording;
 import de.br.multimedia.mediathekplus.b7.model.RecordingFeed;
 import de.br.multimedia.mediathekplus.b7.service.RecordingFilterEnum;
-import de.br.multimedia.mediathekplus.b7.service.rest.RestRecordingDeliveryService;
+import de.br.multimedia.mediathekplus.b7.service.rest.RecordingDeliveryRestService;
 
 @Path("recordings")
-public class MockedRecordingDeliveryService extends RestRecordingDeliveryService {
+public class MockedRecordingDeliveryService extends RecordingDeliveryRestService {
 
 	private static final Logger log = LoggerFactory.getLogger(MockedRecordingDeliveryService.class);
 
