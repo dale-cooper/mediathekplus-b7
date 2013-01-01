@@ -47,8 +47,8 @@ public class RecordingTestDataBuilder {
 	private List<RecordedFile> createFiles(String name) {
 		List<RecordedFile> files = new ArrayList<RecordedFile>();
 		files.add(new RecordedFile(RecordedFileTypeEnum.PREVIEW, "/path/to/" + name + "/filename_P.mp4"));
-		files.add(new RecordedFile(RecordedFileTypeEnum.WEB_XS_96, "/path/to/" + name + "/filename_0.mp4"));
-		files.add(new RecordedFile(RecordedFileTypeEnum.WEB_S_144, "/path/to/" + name + "/filename_1.mp4"));
+		files.add(new RecordedFile(RecordedFileTypeEnum.WEB_S_144, "/path/to/" + name + "/filename_0.mp4"));
+		files.add(new RecordedFile(RecordedFileTypeEnum.WEB_S_216, "/path/to/" + name + "/filename_1.mp4"));
 		files.add(new RecordedFile(RecordedFileTypeEnum.WEB_M_288, "/path/to/" + name + "/filename_2.mp4"));
 		files.add(new RecordedFile(RecordedFileTypeEnum.WEB_L_544, "/path/to/" + name + "/filename_3.mp4"));
 		files.add(new RecordedFile(RecordedFileTypeEnum.WEB_XL_720, "/path/to/" + name + "/filename_4.mp4"));
