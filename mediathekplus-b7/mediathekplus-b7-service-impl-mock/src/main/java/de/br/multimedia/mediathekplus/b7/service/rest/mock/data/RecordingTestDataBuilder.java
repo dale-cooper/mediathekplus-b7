@@ -1,4 +1,4 @@
-package de.br.multimedia.mediathekplus.b7.service.rest.mock;
+package de.br.multimedia.mediathekplus.b7.service.rest.mock.data;
 
 import java.util.ArrayList;
 import java.util.Date;

@@ -14,6 +14,16 @@ public class Order {
 	private boolean deliverRecording;
 	private GeoprotectionTypeEnum geoprotection;
 
+	public Order() {
+	}
+
+	public Order(String externalId, boolean liveStreaming, boolean deliverRecording, GeoprotectionTypeEnum geoprotection) {
+		this.externalId = externalId;
+		this.liveStreaming = liveStreaming;
+		this.deliverRecording = deliverRecording;
+		this.geoprotection = geoprotection;
+	}
+
 	public String getExternalId() {
 		return externalId;
 	}

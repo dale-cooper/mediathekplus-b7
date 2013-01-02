@@ -6,13 +6,6 @@ import de.br.multimedia.mediathekplus.b7.model.RecordingFeed;
 public interface RecordingDeliveryService {
 	
 	
-	public static final String QUERY_PARAM_DELIVERED = "delivered";
-	public static final String QUERY_PARAM_STATUS_FILTER = "statusFilter";
-	public static final String PATH_PARAM_RECORDING_ID = "recordingId";
-	public static final String PATH_RECORDINGS = "recordings";
-	public static final String SUBPATH_UPDATE_RECORDING_STATUS = "{recordingId}/status";
-	public static final String SUBPATH_MOVE_RECORDED_FILES = "{recordingId}/files";
-
 	
 	/**
 	 * Generates a list of all existing recordings.

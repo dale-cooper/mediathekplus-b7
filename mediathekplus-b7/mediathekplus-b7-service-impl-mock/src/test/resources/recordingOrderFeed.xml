@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<recordingOrderFeed>
+	<lastModified>2013-01-02T22:48:46.880+01:00</lastModified>
+	<order>
+		<externalId>dmb-first</externalId>
+		<liveStreaming>true</liveStreaming>
+		<deliverRecording>true</deliverRecording>
+		<geoprotection>DACH</geoprotection>
+	</order>
+	<order>
+		<externalId>dmb-second</externalId>
+		<liveStreaming>false</liveStreaming>
+		<deliverRecording>true</deliverRecording>
+		<geoprotection>WORLDWIDE</geoprotection>
+	</order>
+	<order>
+		<externalId>dmb-third</externalId>
+		<liveStreaming>true</liveStreaming>
+		<deliverRecording>true</deliverRecording>
+		<geoprotection>WORLDWIDE</geoprotection>
+	</order>
+	<order>
+		<externalId>dmb-fourth</externalId>
+		<liveStreaming>true</liveStreaming>
+		<deliverRecording>true</deliverRecording>
+		<geoprotection>GERMANY</geoprotection>
+	</order>
+</recordingOrderFeed>

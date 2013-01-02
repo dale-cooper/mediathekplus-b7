@@ -1,8 +1,8 @@
-package de.br.multimedia.mediathekplus.b7.service.rest.mock;
+package de.br.multimedia.mediathekplus.b7.rest.server;
 
 import com.sun.jersey.api.container.grizzly.GrizzlyServerFactory;
 
-public class Server {
+public class StandaloneServer {
 	
 	
 	public static void main(String[] args) throws Exception {

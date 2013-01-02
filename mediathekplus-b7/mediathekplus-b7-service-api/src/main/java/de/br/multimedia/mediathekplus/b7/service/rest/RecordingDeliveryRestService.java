@@ -12,25 +12,35 @@ import de.br.multimedia.mediathekplus.b7.model.RecordingFeed;
 import de.br.multimedia.mediathekplus.b7.service.RecordingDeliveryService;
 import de.br.multimedia.mediathekplus.b7.service.RecordingFilterEnum;
 
-@Path(RecordingDeliveryService.PATH_RECORDINGS)
-@Produces({ "application/xml", "application/json" })
+@Path(RecordingDeliveryRestService.PATH_RECORDINGS)
+@Produces({ "application/xml" })
 public abstract class RecordingDeliveryRestService implements RecordingDeliveryService {
 
+	public static final String PATH_RECORDINGS = "recordings";
+	public static final String SUBPATH_RECORDING_FEED = "recordingFeed";
+	public static final String SUBPATH_MOVE_RECORDED_FILES = "{recordingId}/files";
+	public static final String SUBPATH_UPDATE_RECORDING_STATUS = "{recordingId}/status";
+	public static final String QUERY_PARAM_DELIVERED = "delivered";
+	public static final String QUERY_PARAM_STATUS_FILTER = "statusFilter";
+	public static final String PATH_PARAM_RECORDING_ID = "recordingId";
+
+
 	@GET
+	@Path(SUBPATH_RECORDING_FEED)
 	public abstract RecordingFeed getRecordings(
-			@QueryParam(RecordingDeliveryService.QUERY_PARAM_STATUS_FILTER) final RecordingFilterEnum statusFilter);
+			@QueryParam(QUERY_PARAM_STATUS_FILTER) final RecordingFilterEnum statusFilter);
 
 	@PUT
-	@Path(RecordingDeliveryService.SUBPATH_MOVE_RECORDED_FILES)
+	@Path(SUBPATH_MOVE_RECORDED_FILES)
 	public abstract void moveRecordedFiles(
-			@PathParam(RecordingDeliveryService.PATH_PARAM_RECORDING_ID) final long recordingId,
+			@PathParam(PATH_PARAM_RECORDING_ID) final long recordingId,
 			final RecordedFilesFeed filesToMove);
 
 	@PUT
-	@Path(RecordingDeliveryService.SUBPATH_UPDATE_RECORDING_STATUS)
+	@Path(SUBPATH_UPDATE_RECORDING_STATUS)
 	public abstract void updateRecordingStatus(
-			@PathParam(RecordingDeliveryService.PATH_PARAM_RECORDING_ID) final long recordingId,
-			@QueryParam(RecordingDeliveryService.QUERY_PARAM_DELIVERED) final boolean delivered);
+			@PathParam(PATH_PARAM_RECORDING_ID) final long recordingId,
+			@QueryParam(QUERY_PARAM_DELIVERED) final boolean delivered);
 
 
 }
