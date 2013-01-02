@@ -24,6 +24,7 @@ public class RecordingTestDataBuilder {
 		Recording recording = new Recording();
 		recording.setRecordingId(deriveId(name));
 		recording.setExternalId("dmb-" + name);
+		recording.setBroadcastSeriesLabel("Dahoam is Dahoam");
 		recording.setTitle(name + " title");
 		recording.setTeaserText(name + " teaser text");
 		recording.setAuthor(name + " author");

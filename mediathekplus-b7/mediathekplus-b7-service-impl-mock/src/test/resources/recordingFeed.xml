@@ -3,14 +3,16 @@
 	<recording>
 		<recordingId>1268684262</recordingId>
 		<externalId>dmb-fourth</externalId>
+		<broadcastSeriesLabel>Dahoam is Dahoam</broadcastSeriesLabel>
 		<title>fourth title</title>
 		<teaserText>fourth teaser text</teaserText>
 		<author>fourth author</author>
-		<broadcastStartDate>2013-01-01T19:04:41.852+01:00</broadcastStartDate>
-		<broadcastEndDate>2013-01-01T19:04:41.852+01:00</broadcastEndDate>
-		<recordingStartDate>2013-01-01T19:04:41.852+01:00</recordingStartDate>
-		<recordingEndDate>2013-01-01T19:04:41.852+01:00</recordingEndDate>
-		<trimmingChangedDate>2013-01-01T19:04:41.852+01:00</trimmingChangedDate>
+		<broadcastStartDate>2013-01-02T18:27:48.840+01:00</broadcastStartDate>
+		<broadcastEndDate>2013-01-02T18:27:48.840+01:00</broadcastEndDate>
+		<recordingStartDate>2013-01-02T18:27:48.840+01:00</recordingStartDate>
+		<recordingEndDate>2013-01-02T18:27:48.840+01:00</recordingEndDate>
+		<trimmingChangedDate>2013-01-02T18:27:48.840+01:00
+		</trimmingChangedDate>
 		<trimmingChangedByUser>trimming-user</trimmingChangedByUser>
 		<delivered>false</delivered>
 		<files>
@@ -47,14 +49,16 @@
 	<recording>
 		<recordingId>110331239</recordingId>
 		<externalId>dmb-third</externalId>
+		<broadcastSeriesLabel>Dahoam is Dahoam</broadcastSeriesLabel>
 		<title>third title</title>
 		<teaserText>third teaser text</teaserText>
 		<author>third author</author>
-		<broadcastStartDate>2013-01-01T19:04:41.852+01:00</broadcastStartDate>
-		<broadcastEndDate>2013-01-01T19:04:41.852+01:00</broadcastEndDate>
-		<recordingStartDate>2013-01-01T19:04:41.852+01:00</recordingStartDate>
-		<recordingEndDate>2013-01-01T19:04:41.852+01:00</recordingEndDate>
-		<trimmingChangedDate>2013-01-01T19:04:41.852+01:00</trimmingChangedDate>
+		<broadcastStartDate>2013-01-02T18:27:48.840+01:00</broadcastStartDate>
+		<broadcastEndDate>2013-01-02T18:27:48.840+01:00</broadcastEndDate>
+		<recordingStartDate>2013-01-02T18:27:48.840+01:00</recordingStartDate>
+		<recordingEndDate>2013-01-02T18:27:48.840+01:00</recordingEndDate>
+		<trimmingChangedDate>2013-01-02T18:27:48.840+01:00
+		</trimmingChangedDate>
 		<trimmingChangedByUser>trimming-user</trimmingChangedByUser>
 		<delivered>false</delivered>
 		<files>
@@ -91,14 +95,16 @@
 	<recording>
 		<recordingId>906279820</recordingId>
 		<externalId>dmb-second</externalId>
+		<broadcastSeriesLabel>Dahoam is Dahoam</broadcastSeriesLabel>
 		<title>second title</title>
 		<teaserText>second teaser text</teaserText>
 		<author>second author</author>
-		<broadcastStartDate>2013-01-01T19:04:41.852+01:00</broadcastStartDate>
-		<broadcastEndDate>2013-01-01T19:04:41.852+01:00</broadcastEndDate>
-		<recordingStartDate>2013-01-01T19:04:41.852+01:00</recordingStartDate>
-		<recordingEndDate>2013-01-01T19:04:41.852+01:00</recordingEndDate>
-		<trimmingChangedDate>2013-01-01T19:04:41.852+01:00</trimmingChangedDate>
+		<broadcastStartDate>2013-01-02T18:27:48.840+01:00</broadcastStartDate>
+		<broadcastEndDate>2013-01-02T18:27:48.840+01:00</broadcastEndDate>
+		<recordingStartDate>2013-01-02T18:27:48.840+01:00</recordingStartDate>
+		<recordingEndDate>2013-01-02T18:27:48.840+01:00</recordingEndDate>
+		<trimmingChangedDate>2013-01-02T18:27:48.840+01:00
+		</trimmingChangedDate>
 		<trimmingChangedByUser>trimming-user</trimmingChangedByUser>
 		<delivered>false</delivered>
 		<files>
@@ -135,14 +141,16 @@
 	<recording>
 		<recordingId>97440432</recordingId>
 		<externalId>dmb-first</externalId>
+		<broadcastSeriesLabel>Dahoam is Dahoam</broadcastSeriesLabel>
 		<title>first title</title>
 		<teaserText>first teaser text</teaserText>
 		<author>first author</author>
-		<broadcastStartDate>2013-01-01T19:04:41.852+01:00</broadcastStartDate>
-		<broadcastEndDate>2013-01-01T19:04:41.852+01:00</broadcastEndDate>
-		<recordingStartDate>2013-01-01T19:04:41.852+01:00</recordingStartDate>
-		<recordingEndDate>2013-01-01T19:04:41.852+01:00</recordingEndDate>
-		<trimmingChangedDate>2013-01-01T19:04:41.852+01:00</trimmingChangedDate>
+		<broadcastStartDate>2013-01-02T18:27:48.839+01:00</broadcastStartDate>
+		<broadcastEndDate>2013-01-02T18:27:48.839+01:00</broadcastEndDate>
+		<recordingStartDate>2013-01-02T18:27:48.839+01:00</recordingStartDate>
+		<recordingEndDate>2013-01-02T18:27:48.839+01:00</recordingEndDate>
+		<trimmingChangedDate>2013-01-02T18:27:48.839+01:00
+		</trimmingChangedDate>
 		<trimmingChangedByUser>trimming-user</trimmingChangedByUser>
 		<delivered>false</delivered>
 		<files>

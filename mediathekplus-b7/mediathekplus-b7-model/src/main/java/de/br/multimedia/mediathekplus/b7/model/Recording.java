@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(propOrder = { "recordingId", "externalId", "title", "teaserText",
+@XmlType(propOrder = { "recordingId", "externalId", "broadcastSeriesLabel", "title", "teaserText",
 		"author", "broadcastStartDate", "broadcastEndDate",
 		"recordingStartDate", "recordingEndDate", "trimmingChangedDate",
 		"trimmingChangedByUser", "delivered","files" })
@@ -18,6 +18,7 @@ import javax.xml.bind.annotation.XmlType;
 public class Recording {
 	private long recordingId;
 	private String externalId;
+	private String broadcastSeriesLabel;
 	private String title;
 	private String teaserText;
 	private String author;
@@ -135,6 +136,14 @@ public class Recording {
 
 	public void setDelivered(boolean delivered) {
 		this.delivered = delivered;
+	}
+
+	public String getBroadcastSeriesLabel() {
+		return broadcastSeriesLabel;
+	}
+
+	public void setBroadcastSeriesLabel(String broadcastSeriesLabel) {
+		this.broadcastSeriesLabel = broadcastSeriesLabel;
 	}
 
 }
