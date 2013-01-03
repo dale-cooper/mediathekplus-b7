@@ -2,13 +2,16 @@ package de.br.multimedia.mediathekplus.b7.model;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(propOrder = { "type", "path" })
 public class RecordedFile {
 
+	@XmlAttribute
 	private RecordedFileTypeEnum type;
+	@XmlAttribute
 	private String path;
 
 	public RecordedFile() {
