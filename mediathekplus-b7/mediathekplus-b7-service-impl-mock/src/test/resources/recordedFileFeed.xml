@@ -1,33 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <recordedFilesFeed>
 	<files>
-		<file>
-			<type>PREVIEW</type>
-			<path>/path/to/fourth/filename_P.mp4</path>
-		</file>
-		<file>
-			<type>WEB_S_144</type>
-			<path>/path/to/fourth/filename_0.mp4</path>
-		</file>
-		<file>
-			<type>WEB_S_216</type>
-			<path>/path/to/fourth/filename_1.mp4</path>
-		</file>
-		<file>
-			<type>WEB_M_288</type>
-			<path>/path/to/fourth/filename_2.mp4</path>
-		</file>
-		<file>
-			<type>WEB_L_544</type>
-			<path>/path/to/fourth/filename_3.mp4</path>
-		</file>
-		<file>
-			<type>WEB_XL_720</type>
-			<path>/path/to/fourth/filename_4.mp4</path>
-		</file>
-		<file>
-			<type>WEB_XL_1080</type>
-			<path>/path/to/fourth/filename_HD.mp4</path>
-		</file>
+		<file path="/path/to/fourth/filename_P.mp4" type="PREVIEW" />
+		<file path="/path/to/fourth/filename_0.mp4" type="WEB_S_144" />
+		<file path="/path/to/fourth/filename_1.mp4" type="WEB_S_216" />
+		<file path="/path/to/fourth/filename_2.mp4" type="WEB_M_288" />
+		<file path="/path/to/fourth/filename_3.mp4" type="WEB_L_544" />
+		<file path="/path/to/fourth/filename_4.mp4" type="WEB_XL_720" />
+		<file path="/path/to/fourth/filename_HD.mp4" type="WEB_XL_1080" />
 	</files>
 </recordedFilesFeed>

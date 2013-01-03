@@ -1,187 +1,95 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <recordingFeed>
-	<recording>
-		<recordingId>1268684262</recordingId>
-		<externalId>dmb-fourth</externalId>
+	<recording delivered="false" externalId="dmb-fourth"
+		recordingId="1268684262">
 		<broadcastSeriesLabel>Dahoam is Dahoam</broadcastSeriesLabel>
 		<title>fourth title</title>
 		<teaserText>fourth teaser text</teaserText>
 		<author>fourth author</author>
-		<broadcastStartDate>2013-01-02T18:27:48.840+01:00</broadcastStartDate>
-		<broadcastEndDate>2013-01-02T18:27:48.840+01:00</broadcastEndDate>
-		<recordingStartDate>2013-01-02T18:27:48.840+01:00</recordingStartDate>
-		<recordingEndDate>2013-01-02T18:27:48.840+01:00</recordingEndDate>
-		<trimmingChangedDate>2013-01-02T18:27:48.840+01:00
+		<broadcastStartDate>2013-01-03T14:14:09.013+01:00</broadcastStartDate>
+		<broadcastEndDate>2013-01-03T14:14:09.013+01:00</broadcastEndDate>
+		<recordingStartDate>2013-01-03T14:14:09.013+01:00</recordingStartDate>
+		<recordingEndDate>2013-01-03T14:14:09.013+01:00</recordingEndDate>
+		<trimmingChangedDate>2013-01-03T14:14:09.013+01:00
 		</trimmingChangedDate>
 		<trimmingChangedByUser>trimming-user</trimmingChangedByUser>
-		<delivered>false</delivered>
 		<files>
-			<file>
-				<type>PREVIEW</type>
-				<path>/path/to/fourth/filename_P.mp4</path>
-			</file>
-			<file>
-				<type>WEB_S_144</type>
-				<path>/path/to/fourth/filename_0.mp4</path>
-			</file>
-			<file>
-				<type>WEB_S_216</type>
-				<path>/path/to/fourth/filename_1.mp4</path>
-			</file>
-			<file>
-				<type>WEB_M_288</type>
-				<path>/path/to/fourth/filename_2.mp4</path>
-			</file>
-			<file>
-				<type>WEB_L_544</type>
-				<path>/path/to/fourth/filename_3.mp4</path>
-			</file>
-			<file>
-				<type>WEB_XL_720</type>
-				<path>/path/to/fourth/filename_4.mp4</path>
-			</file>
-			<file>
-				<type>WEB_XL_1080</type>
-				<path>/path/to/fourth/filename_HD.mp4</path>
-			</file>
+			<file path="/path/to/fourth/filename_P.mp4" type="PREVIEW" />
+			<file path="/path/to/fourth/filename_0.mp4" type="WEB_S_144" />
+			<file path="/path/to/fourth/filename_1.mp4" type="WEB_S_216" />
+			<file path="/path/to/fourth/filename_2.mp4" type="WEB_M_288" />
+			<file path="/path/to/fourth/filename_3.mp4" type="WEB_L_544" />
+			<file path="/path/to/fourth/filename_4.mp4" type="WEB_XL_720" />
+			<file path="/path/to/fourth/filename_HD.mp4" type="WEB_XL_1080" />
 		</files>
 	</recording>
-	<recording>
-		<recordingId>110331239</recordingId>
-		<externalId>dmb-third</externalId>
+	<recording delivered="false" externalId="dmb-third"
+		recordingId="110331239">
 		<broadcastSeriesLabel>Dahoam is Dahoam</broadcastSeriesLabel>
 		<title>third title</title>
 		<teaserText>third teaser text</teaserText>
 		<author>third author</author>
-		<broadcastStartDate>2013-01-02T18:27:48.840+01:00</broadcastStartDate>
-		<broadcastEndDate>2013-01-02T18:27:48.840+01:00</broadcastEndDate>
-		<recordingStartDate>2013-01-02T18:27:48.840+01:00</recordingStartDate>
-		<recordingEndDate>2013-01-02T18:27:48.840+01:00</recordingEndDate>
-		<trimmingChangedDate>2013-01-02T18:27:48.840+01:00
+		<broadcastStartDate>2013-01-03T14:14:09.013+01:00</broadcastStartDate>
+		<broadcastEndDate>2013-01-03T14:14:09.013+01:00</broadcastEndDate>
+		<recordingStartDate>2013-01-03T14:14:09.013+01:00</recordingStartDate>
+		<recordingEndDate>2013-01-03T14:14:09.013+01:00</recordingEndDate>
+		<trimmingChangedDate>2013-01-03T14:14:09.013+01:00
 		</trimmingChangedDate>
 		<trimmingChangedByUser>trimming-user</trimmingChangedByUser>
-		<delivered>false</delivered>
 		<files>
-			<file>
-				<type>PREVIEW</type>
-				<path>/path/to/third/filename_P.mp4</path>
-			</file>
-			<file>
-				<type>WEB_S_144</type>
-				<path>/path/to/third/filename_0.mp4</path>
-			</file>
-			<file>
-				<type>WEB_S_216</type>
-				<path>/path/to/third/filename_1.mp4</path>
-			</file>
-			<file>
-				<type>WEB_M_288</type>
-				<path>/path/to/third/filename_2.mp4</path>
-			</file>
-			<file>
-				<type>WEB_L_544</type>
-				<path>/path/to/third/filename_3.mp4</path>
-			</file>
-			<file>
-				<type>WEB_XL_720</type>
-				<path>/path/to/third/filename_4.mp4</path>
-			</file>
-			<file>
-				<type>WEB_XL_1080</type>
-				<path>/path/to/third/filename_HD.mp4</path>
-			</file>
+			<file path="/path/to/third/filename_P.mp4" type="PREVIEW" />
+			<file path="/path/to/third/filename_0.mp4" type="WEB_S_144" />
+			<file path="/path/to/third/filename_1.mp4" type="WEB_S_216" />
+			<file path="/path/to/third/filename_2.mp4" type="WEB_M_288" />
+			<file path="/path/to/third/filename_3.mp4" type="WEB_L_544" />
+			<file path="/path/to/third/filename_4.mp4" type="WEB_XL_720" />
+			<file path="/path/to/third/filename_HD.mp4" type="WEB_XL_1080" />
 		</files>
 	</recording>
-	<recording>
-		<recordingId>906279820</recordingId>
-		<externalId>dmb-second</externalId>
+	<recording delivered="false" externalId="dmb-second"
+		recordingId="906279820">
 		<broadcastSeriesLabel>Dahoam is Dahoam</broadcastSeriesLabel>
 		<title>second title</title>
 		<teaserText>second teaser text</teaserText>
 		<author>second author</author>
-		<broadcastStartDate>2013-01-02T18:27:48.840+01:00</broadcastStartDate>
-		<broadcastEndDate>2013-01-02T18:27:48.840+01:00</broadcastEndDate>
-		<recordingStartDate>2013-01-02T18:27:48.840+01:00</recordingStartDate>
-		<recordingEndDate>2013-01-02T18:27:48.840+01:00</recordingEndDate>
-		<trimmingChangedDate>2013-01-02T18:27:48.840+01:00
+		<broadcastStartDate>2013-01-03T14:14:09.013+01:00</broadcastStartDate>
+		<broadcastEndDate>2013-01-03T14:14:09.013+01:00</broadcastEndDate>
+		<recordingStartDate>2013-01-03T14:14:09.013+01:00</recordingStartDate>
+		<recordingEndDate>2013-01-03T14:14:09.013+01:00</recordingEndDate>
+		<trimmingChangedDate>2013-01-03T14:14:09.013+01:00
 		</trimmingChangedDate>
 		<trimmingChangedByUser>trimming-user</trimmingChangedByUser>
-		<delivered>false</delivered>
 		<files>
-			<file>
-				<type>PREVIEW</type>
-				<path>/path/to/second/filename_P.mp4</path>
-			</file>
-			<file>
-				<type>WEB_S_144</type>
-				<path>/path/to/second/filename_0.mp4</path>
-			</file>
-			<file>
-				<type>WEB_S_216</type>
-				<path>/path/to/second/filename_1.mp4</path>
-			</file>
-			<file>
-				<type>WEB_M_288</type>
-				<path>/path/to/second/filename_2.mp4</path>
-			</file>
-			<file>
-				<type>WEB_L_544</type>
-				<path>/path/to/second/filename_3.mp4</path>
-			</file>
-			<file>
-				<type>WEB_XL_720</type>
-				<path>/path/to/second/filename_4.mp4</path>
-			</file>
-			<file>
-				<type>WEB_XL_1080</type>
-				<path>/path/to/second/filename_HD.mp4</path>
-			</file>
+			<file path="/path/to/second/filename_P.mp4" type="PREVIEW" />
+			<file path="/path/to/second/filename_0.mp4" type="WEB_S_144" />
+			<file path="/path/to/second/filename_1.mp4" type="WEB_S_216" />
+			<file path="/path/to/second/filename_2.mp4" type="WEB_M_288" />
+			<file path="/path/to/second/filename_3.mp4" type="WEB_L_544" />
+			<file path="/path/to/second/filename_4.mp4" type="WEB_XL_720" />
+			<file path="/path/to/second/filename_HD.mp4" type="WEB_XL_1080" />
 		</files>
 	</recording>
-	<recording>
-		<recordingId>97440432</recordingId>
-		<externalId>dmb-first</externalId>
+	<recording delivered="false" externalId="dmb-first"
+		recordingId="97440432">
 		<broadcastSeriesLabel>Dahoam is Dahoam</broadcastSeriesLabel>
 		<title>first title</title>
 		<teaserText>first teaser text</teaserText>
 		<author>first author</author>
-		<broadcastStartDate>2013-01-02T18:27:48.839+01:00</broadcastStartDate>
-		<broadcastEndDate>2013-01-02T18:27:48.839+01:00</broadcastEndDate>
-		<recordingStartDate>2013-01-02T18:27:48.839+01:00</recordingStartDate>
-		<recordingEndDate>2013-01-02T18:27:48.839+01:00</recordingEndDate>
-		<trimmingChangedDate>2013-01-02T18:27:48.839+01:00
+		<broadcastStartDate>2013-01-03T14:14:09.013+01:00</broadcastStartDate>
+		<broadcastEndDate>2013-01-03T14:14:09.013+01:00</broadcastEndDate>
+		<recordingStartDate>2013-01-03T14:14:09.013+01:00</recordingStartDate>
+		<recordingEndDate>2013-01-03T14:14:09.013+01:00</recordingEndDate>
+		<trimmingChangedDate>2013-01-03T14:14:09.013+01:00
 		</trimmingChangedDate>
 		<trimmingChangedByUser>trimming-user</trimmingChangedByUser>
-		<delivered>false</delivered>
 		<files>
-			<file>
-				<type>PREVIEW</type>
-				<path>/path/to/first/filename_P.mp4</path>
-			</file>
-			<file>
-				<type>WEB_S_144</type>
-				<path>/path/to/first/filename_0.mp4</path>
-			</file>
-			<file>
-				<type>WEB_S_216</type>
-				<path>/path/to/first/filename_1.mp4</path>
-			</file>
-			<file>
-				<type>WEB_M_288</type>
-				<path>/path/to/first/filename_2.mp4</path>
-			</file>
-			<file>
-				<type>WEB_L_544</type>
-				<path>/path/to/first/filename_3.mp4</path>
-			</file>
-			<file>
-				<type>WEB_XL_720</type>
-				<path>/path/to/first/filename_4.mp4</path>
-			</file>
-			<file>
-				<type>WEB_XL_1080</type>
-				<path>/path/to/first/filename_HD.mp4</path>
-			</file>
+			<file path="/path/to/first/filename_P.mp4" type="PREVIEW" />
+			<file path="/path/to/first/filename_0.mp4" type="WEB_S_144" />
+			<file path="/path/to/first/filename_1.mp4" type="WEB_S_216" />
+			<file path="/path/to/first/filename_2.mp4" type="WEB_M_288" />
+			<file path="/path/to/first/filename_3.mp4" type="WEB_L_544" />
+			<file path="/path/to/first/filename_4.mp4" type="WEB_XL_720" />
+			<file path="/path/to/first/filename_HD.mp4" type="WEB_XL_1080" />
 		</files>
 	</recording>
 </recordingFeed>

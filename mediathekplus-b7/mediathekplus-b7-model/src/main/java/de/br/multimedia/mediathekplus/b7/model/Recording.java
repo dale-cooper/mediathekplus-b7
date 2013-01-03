@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlType;
@@ -16,9 +17,15 @@ import javax.xml.bind.annotation.XmlType;
 		"trimmingChangedByUser", "delivered","files" })
 
 public class Recording {
+	
+	@XmlAttribute(required=true)
 	private long recordingId;
+	@XmlAttribute(required=true)
 	private String externalId;
+	@XmlAttribute(required=true)
+	private boolean delivered;
 	private String broadcastSeriesLabel;
+	@XmlElement(required=true)
 	private String title;
 	private String teaserText;
 	private String author;
@@ -28,7 +35,6 @@ public class Recording {
 	private Date recordingEndDate;
 	private Date trimmingChangedDate;
 	private String trimmingChangedByUser;
-	private boolean delivered;
 
 	@XmlElementWrapper(name = "files")
 	@XmlElement(name = "file")

@@ -17,7 +17,7 @@ import de.br.multimedia.mediathekplus.b7.service.RecordingFilterEnum;
 public abstract class RecordingDeliveryRestService implements RecordingDeliveryService {
 
 	public static final String PATH_RECORDINGS = "recordings";
-	public static final String SUBPATH_RECORDING_FEED = "recordingFeed";
+	public static final String SUBPATH_RECORDING_FEED = "feed";
 	public static final String SUBPATH_MOVE_RECORDED_FILES = "{recordingId}/files";
 	public static final String SUBPATH_UPDATE_RECORDING_STATUS = "{recordingId}/status";
 	public static final String QUERY_PARAM_DELIVERED = "delivered";

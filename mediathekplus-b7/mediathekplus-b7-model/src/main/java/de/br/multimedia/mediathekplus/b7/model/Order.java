@@ -2,17 +2,19 @@ package de.br.multimedia.mediathekplus.b7.model;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlAttribute;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(propOrder = { "externalId", "liveStreaming", "deliverRecording",
-		"geoprotection" })
 public class Order {
 	
-	private String externalId;
-	private boolean liveStreaming;
-	private boolean deliverRecording;
+	@XmlAttribute
 	private GeoprotectionTypeEnum geoprotection;
+	@XmlAttribute
+	private boolean deliverRecording;
+	@XmlAttribute
+	private boolean liveStreaming;
+	@XmlAttribute
+	private String externalId;
 
 	public Order() {
 	}
