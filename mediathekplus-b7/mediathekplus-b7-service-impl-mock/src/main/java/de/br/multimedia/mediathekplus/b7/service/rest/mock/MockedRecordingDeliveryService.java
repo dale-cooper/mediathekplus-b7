@@ -12,7 +12,6 @@ import javax.ws.rs.core.Response.Status;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import de.br.multimedia.mediathekplus.b7.model.RecordedFilesFeed;
 import de.br.multimedia.mediathekplus.b7.model.Recording;
 import de.br.multimedia.mediathekplus.b7.model.RecordingFeed;
 import de.br.multimedia.mediathekplus.b7.service.RecordingFilterEnum;
@@ -71,14 +70,5 @@ public class MockedRecordingDeliveryService extends RecordingDeliveryRestService
 		throw new WebApplicationException(new Exception("The recording with the id " + recordingId + " does not exist."), Status.NOT_FOUND);
 	}
 
-	public void moveRecordedFiles(final long recordingId, final RecordedFilesFeed filesToMove) {
-		log.info("update files of id {} with files {}", recordingId, filesToMove);
-		Recording recording = recordings.get(recordingId);
-		if (recording != null)
-			recording.setFiles(filesToMove.getFiles());
-		else
-			throwRecordingNotFoundException(recordingId);
-
-	}
 
 }

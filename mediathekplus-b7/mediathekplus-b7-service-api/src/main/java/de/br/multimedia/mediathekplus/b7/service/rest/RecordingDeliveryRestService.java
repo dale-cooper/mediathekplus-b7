@@ -7,7 +7,6 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 
-import de.br.multimedia.mediathekplus.b7.model.RecordedFilesFeed;
 import de.br.multimedia.mediathekplus.b7.model.RecordingFeed;
 import de.br.multimedia.mediathekplus.b7.service.RecordingDeliveryService;
 import de.br.multimedia.mediathekplus.b7.service.RecordingFilterEnum;
@@ -18,7 +17,6 @@ public abstract class RecordingDeliveryRestService implements RecordingDeliveryS
 
 	public static final String PATH_RECORDINGS = "recordings";
 	public static final String SUBPATH_RECORDING_FEED = "feed";
-	public static final String SUBPATH_MOVE_RECORDED_FILES = "{recordingId}/files";
 	public static final String SUBPATH_UPDATE_RECORDING_STATUS = "{recordingId}/status";
 	public static final String QUERY_PARAM_DELIVERED = "delivered";
 	public static final String QUERY_PARAM_STATUS_FILTER = "statusFilter";
@@ -30,11 +28,6 @@ public abstract class RecordingDeliveryRestService implements RecordingDeliveryS
 	public abstract RecordingFeed getRecordings(
 			@QueryParam(QUERY_PARAM_STATUS_FILTER) final RecordingFilterEnum statusFilter);
 
-	@PUT
-	@Path(SUBPATH_MOVE_RECORDED_FILES)
-	public abstract void moveRecordedFiles(
-			@PathParam(PATH_PARAM_RECORDING_ID) final long recordingId,
-			final RecordedFilesFeed filesToMove);
 
 	@PUT
 	@Path(SUBPATH_UPDATE_RECORDING_STATUS)
