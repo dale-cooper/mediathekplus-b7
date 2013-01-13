@@ -1,3 +1,4 @@
+
 * Maven 3 installieren: http://maven.apache.org/download.cgi
 * in das Verzechnis mediathekplus-b7/mediathekplus-b7 wechseln, wo die Datei pom.xml liegt
 
