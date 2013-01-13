@@ -1,6 +1,6 @@
-1) Maven 3 installieren: http://maven.apache.org/download.cgi
-2) in das Verzechnis mediathekplus-b7/mediathekplus-b7 wechseln, wo die Datei pom.xml liegt
-3) "mvn clean install" ausführen und schauen ob es fehlerfrei baut
+# Maven 3 installieren: http://maven.apache.org/download.cgi
+# in das Verzechnis mediathekplus-b7/mediathekplus-b7 wechseln, wo die Datei pom.xml liegt
+# "mvn clean install" ausführen und schauen ob es fehlerfrei baut
 
     [INFO] ------------------------------------------------------------------------
     [INFO] Reactor Summary:
