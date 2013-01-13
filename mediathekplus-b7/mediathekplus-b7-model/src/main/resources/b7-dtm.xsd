@@ -3,8 +3,6 @@
 
   <xs:element name="liveStreamingOrderFeed" type="liveStreamingOrderFeed"/>
 
-  <xs:element name="recordedFilesFeed" type="recordedFilesFeed"/>
-
   <xs:element name="recordingFeed" type="recordingFeed"/>
 
   <xs:element name="recordingOrderFeed" type="recordingOrderFeed"/>
@@ -64,10 +62,10 @@
 
   <xs:complexType name="order">
     <xs:sequence/>
-    <xs:attribute name="externalId" type="xs:string"/>
-    <xs:attribute name="liveStreaming" type="xs:boolean" use="required"/>
-    <xs:attribute name="deliverRecording" type="xs:boolean" use="required"/>
     <xs:attribute name="geoprotection" type="geoprotectionTypeEnum"/>
+    <xs:attribute name="deliverRecording" type="xs:boolean" use="required"/>
+    <xs:attribute name="liveStreaming" type="xs:boolean" use="required"/>
+    <xs:attribute name="externalId" type="xs:string"/>
   </xs:complexType>
 
   <xs:complexType name="recordingOrderFeed">
@@ -76,12 +74,6 @@
         <xs:sequence/>
       </xs:extension>
     </xs:complexContent>
-  </xs:complexType>
-
-  <xs:complexType name="recordedFilesFeed">
-    <xs:sequence>
-      <xs:element name="file" type="recordedFile" minOccurs="0" maxOccurs="unbounded"/>
-    </xs:sequence>
   </xs:complexType>
 
   <xs:simpleType name="recordedFileTypeEnum">
