@@ -1,6 +1,9 @@
-# Maven 3 installieren: http://maven.apache.org/download.cgi
-# in das Verzechnis mediathekplus-b7/mediathekplus-b7 wechseln, wo die Datei pom.xml liegt
-# "mvn clean install" ausführen und schauen ob es fehlerfrei baut
+* Maven 3 installieren: http://maven.apache.org/download.cgi
+* in das Verzechnis mediathekplus-b7/mediathekplus-b7 wechseln, wo die Datei pom.xml liegt
+
+    $ mvn clean install
+
+ausführen und schauen ob es fehlerfrei baut:
 
     [INFO] ------------------------------------------------------------------------
     [INFO] Reactor Summary:
@@ -12,3 +15,12 @@
     [INFO] mediathekplus-b7-service-impl-mock ................ SUCCESS [3.623s]
     [INFO] ------------------------------------------------------------------------
     [INFO] BUILD SUCCESS
+    
+
+Der Mock-Server wird so gestartet:
+
+    $ cd mediathekplus-b7-service-impl-mock
+    $ mvn exec:exec
+
+Er ist auf den Port 4499 konfiguriert. Das kann man aber in der Datei ./mediathekplus-b7-service-impl-mock/pom.xml ändern.
+Die Pfade bitte aus der separaten Doku entnehmen.
