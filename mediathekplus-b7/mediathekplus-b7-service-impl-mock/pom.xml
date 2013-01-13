@@ -10,20 +10,36 @@
 	</parent>
 	<artifactId>mediathekplus-b7-service-impl-mock</artifactId>
 	<name>mediathekplus-b7-service-impl-mock</name>
-	<packaging>war</packaging>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<configuration>
+					<executable>java</executable>
+					<arguments>
+						<argument>-classpath</argument>
+						<classpath />
+						<argument>de.br.multimedia.mediathekplus.b7.rest.server.StandaloneServer</argument>
+						<argument>http://localhost:4499</argument>
+					</arguments>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 	<dependencies>
-	  <dependency>
-	  	<groupId>de.br.multimedia.mediathekplus.b7</groupId>
-	  	<artifactId>mediathekplus-b7-service-api</artifactId>
-	  	<version>${parent.version}</version>
-	  </dependency>
+		<dependency>
+			<groupId>de.br.multimedia.mediathekplus.b7</groupId>
+			<artifactId>mediathekplus-b7-service-api</artifactId>
+			<version>${parent.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>de.br.multimedia.mediathekplus.b7</groupId>
 			<artifactId>mediathekplus-b7-client</artifactId>
-  			<version>${parent.version}</version>
+			<version>${parent.version}</version>
 		</dependency>
-		 <dependency>
+		<dependency>
 			<groupId>com.sun.grizzly</groupId>
 			<artifactId>grizzly-servlet-webserver</artifactId>
 			<version>1.9.55</version>
