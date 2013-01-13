@@ -1,4 +1,3 @@
-
 * Maven 3 installieren: http://maven.apache.org/download.cgi
 * in das Verzechnis mediathekplus-b7/mediathekplus-b7 wechseln, wo die Datei pom.xml liegt
 
@@ -25,3 +24,7 @@ Der Mock-Server wird so gestartet:
 
 Er ist auf den Port 4499 konfiguriert. Das kann man aber in der Datei ./mediathekplus-b7-service-impl-mock/pom.xml ändern.
 Die Pfade bitte aus der separaten Doku entnehmen.
+
+Client-Implementierung: /mediathekplus-b7-client/src/main/java/de/br/multimedia/mediathekplus/b7/client/RecordingDeliveryRestServiceClient.java
+XSD: /mediathekplus-b7-model/src/main/resources/b7-dtm.xsd
+Client/Server-Test: /mediathekplus-b7-service-impl-mock/src/test/java/de/br/multimedia/mediathekplus/b7/service/rest/mock/MockedRecordingDeliveryServiceTest.java
