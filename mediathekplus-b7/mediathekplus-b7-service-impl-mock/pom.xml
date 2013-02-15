@@ -16,12 +16,12 @@
 	  <dependency>
 	  	<groupId>de.br.multimedia.mediathekplus.b7</groupId>
 	  	<artifactId>mediathekplus-b7-service-api</artifactId>
-	  	<version>${parent.version}</version>
+	  	<version>${project.parent.version}</version>
 	  </dependency>
 		<dependency>
 			<groupId>de.br.multimedia.mediathekplus.b7</groupId>
 			<artifactId>mediathekplus-b7-client</artifactId>
-  			<version>${parent.version}</version>
+  			<version>${project.parent.version}</version>
 		</dependency>
 		 <dependency>
 			<groupId>com.sun.grizzly</groupId>
