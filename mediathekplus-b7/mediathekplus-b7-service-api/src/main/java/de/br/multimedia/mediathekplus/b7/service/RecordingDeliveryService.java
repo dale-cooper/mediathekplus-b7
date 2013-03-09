@@ -1,5 +1,6 @@
 package de.br.multimedia.mediathekplus.b7.service;
 
+import de.br.multimedia.mediathekplus.b7.model.Recording;
 import de.br.multimedia.mediathekplus.b7.model.RecordingFeed;
 
 public interface RecordingDeliveryService {
@@ -13,6 +14,8 @@ public interface RecordingDeliveryService {
 	 */
 	public RecordingFeed getRecordings(RecordingFilterEnum filter);
 	
+	public Recording getRecording(long recordingId);
+
 	/**
 	 * Updates the delivery status of a recording.
 	 * @param recordingId identifies the recording to update

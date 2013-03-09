@@ -5,7 +5,9 @@ import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
 
+import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Response.Status;
 
@@ -47,6 +49,14 @@ public class MockedRecordingDeliveryService extends RecordingDeliveryRestService
 
 		feed.setRecordings(list);
 		return feed;
+	}
+
+	@Override
+	@GET
+	@Path("{recordingId}")
+	public Recording getRecording(@PathParam("recordingId") long recordingId) {
+		log.info("recording with id {} requested", recordingId);
+		return recordings.get(recordingId);
 	}
 
 	private void filterRecordings(final RecordingFilterEnum filter, final List<Recording> list) {

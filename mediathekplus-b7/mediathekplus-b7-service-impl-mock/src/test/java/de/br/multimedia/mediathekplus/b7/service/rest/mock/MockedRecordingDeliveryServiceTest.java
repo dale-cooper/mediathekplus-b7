@@ -49,6 +49,9 @@ public class MockedRecordingDeliveryServiceTest {
 		feed = client.getRecordings(RecordingFilterEnum.DELIVERED);
 		changed = findRecording(feed, id);
 		assertThat("recoding is not present in DELIVERED recordings list", changed, is(not(nullValue())));
+		
+		changed = client.getRecording(id);
+		assertThat("recoding is not DELIVERED", changed.isDelivered(), is(true));
 
 	}
 

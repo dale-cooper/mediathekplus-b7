@@ -3,6 +3,7 @@ package de.br.multimedia.mediathekplus.b7.client;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.WebResource;
 
+import de.br.multimedia.mediathekplus.b7.model.Recording;
 import de.br.multimedia.mediathekplus.b7.model.RecordingFeed;
 import de.br.multimedia.mediathekplus.b7.service.RecordingDeliveryService;
 import de.br.multimedia.mediathekplus.b7.service.RecordingFilterEnum;
@@ -14,10 +15,12 @@ public class RecordingDeliveryRestServiceClient implements RecordingDeliveryServ
 	private final String recordingsUri;
 	private final String updateRecordingStatusUri;
 	private final String recordingIdParam;
+	private final String singleRecordingUri;
 
 	public RecordingDeliveryRestServiceClient(final String baseUri) {
 		this.restClient = Client.create();
-		this.recordingsUri = baseUri + "/" + RecordingDeliveryRestService.PATH_RECORDINGS + "/" + RecordingDeliveryRestService.SUBPATH_RECORDING_FEED;
+		this.recordingsUri = baseUri + "/" + RecordingDeliveryRestService.PATH_RECORDINGS;
+		this.singleRecordingUri = baseUri + "/" + RecordingDeliveryRestService.PATH_RECORDINGS + "/" + RecordingDeliveryRestService.SUBPATH_GET_RECORDING;
 		this.updateRecordingStatusUri = baseUri + "/" + RecordingDeliveryRestService.PATH_RECORDINGS + "/" + RecordingDeliveryRestService.SUBPATH_UPDATE_RECORDING_STATUS;
 		this.recordingIdParam = "{" + RecordingDeliveryRestService.PATH_PARAM_RECORDING_ID + "}";
 	}
@@ -39,5 +42,9 @@ public class RecordingDeliveryRestServiceClient implements RecordingDeliveryServ
 				.queryParam(RecordingDeliveryRestService.QUERY_PARAM_DELIVERED, Boolean.toString(delivered)).put();
 	}
 
+	@Override
+	public Recording getRecording(long recordingId) {
+		return restClient.resource(singleRecordingUri.replace(recordingIdParam, Long.toString(recordingId))).get(Recording.class);
+	}
 
 }
