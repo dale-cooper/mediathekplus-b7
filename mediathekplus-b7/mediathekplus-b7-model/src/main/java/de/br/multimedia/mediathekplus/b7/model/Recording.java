@@ -11,22 +11,25 @@ import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(propOrder = { "recordingId", "externalId", "broadcastSeriesLabel", "title", "teaserText",
-		"author", "broadcastStartDate", "broadcastEndDate",
-		"recordingStartDate", "recordingEndDate", "trimmingChangedDate",
-		"trimmingChangedByUser", "delivered","files" })
-
+@XmlType(propOrder = { "recordingId", "externalId", "channelId",
+		"broadcastSeriesLabel", "title", 
+		"broadcastStartDate", "broadcastEndDate", "recordingStartDate",
+		"recordingEndDate", "trimmingChangedDate", "trimmingChangedByUser",
+		"delivered", "files" })
 public class Recording {
-	
-	@XmlAttribute(required=true)
+
+	@XmlAttribute(required = true)
 	private long recordingId;
-	@XmlAttribute(required=true)
+	@XmlAttribute(required = true)
 	private String externalId;
-	@XmlAttribute(required=true)
+	@XmlAttribute(required = true)
+	private int partNumber;
+	@XmlAttribute(required = true)
 	private boolean delivered;
 	private String broadcastSeriesLabel;
-	@XmlElement(required=true)
-	private String title;
+	private String channelId;
+	@XmlElement(required = true)
+	private String title;  
 	private Date broadcastStartDate;
 	private Date broadcastEndDate;
 	private Date recordingStartDate;
@@ -133,6 +136,22 @@ public class Recording {
 
 	public void setBroadcastSeriesLabel(String broadcastSeriesLabel) {
 		this.broadcastSeriesLabel = broadcastSeriesLabel;
+	}
+
+	public int getPartNumber() {
+		return partNumber;
+	}
+
+	public void setPartNumber(int partNumber) {
+		this.partNumber = partNumber;
+	}
+
+	public String getChannelId() {
+		return channelId;
+	}
+
+	public void setChannelId(String channelId) {
+		this.channelId = channelId;
 	}
 
 }

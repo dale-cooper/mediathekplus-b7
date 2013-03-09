@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <recordingFeed>
-	<recording delivered="false" externalId="dmb-fourth" recordingId="1268684262">
+	<recording delivered="false" externalId="dmb-fourth" recordingId="1268684262" partNumber="1">
+		<channelId>12345</channelId>
 		<broadcastSeriesLabel>Dahoam is Dahoam</broadcastSeriesLabel>
 		<title>fourth title</title>
 		<teaserText>fourth teaser text</teaserText>
@@ -21,7 +22,8 @@
 			<file path="/path/to/fourth/filename_HD.mp4" type="WEB_XL_1080" />
 		</files>
 	</recording>
-	<recording delivered="false" externalId="dmb-third" recordingId="110331239">
+	<recording delivered="false" externalId="dmb-third" recordingId="110331239" partNumber="1">
+		<channelId>12345</channelId>
 		<broadcastSeriesLabel>Dahoam is Dahoam</broadcastSeriesLabel>
 		<title>third title</title>
 		<teaserText>third teaser text</teaserText>
@@ -42,7 +44,8 @@
 			<file path="/path/to/third/filename_HD.mp4" type="WEB_XL_1080" />
 		</files>
 	</recording>
-	<recording delivered="false" externalId="dmb-second" recordingId="906279820">
+	<recording delivered="false" externalId="dmb-second" recordingId="906279820" partNumber="1">
+		<channelId>12345</channelId>
 		<broadcastSeriesLabel>Dahoam is Dahoam</broadcastSeriesLabel>
 		<title>second title</title>
 		<teaserText>second teaser text</teaserText>
@@ -63,7 +66,8 @@
 			<file path="/path/to/second/filename_HD.mp4" type="WEB_XL_1080" />
 		</files>
 	</recording>
-	<recording delivered="false" externalId="dmb-first" recordingId="97440432">
+	<recording delivered="false" externalId="dmb-first" recordingId="97440432" partNumber="1">
+		<channelId>12345</channelId>
 		<broadcastSeriesLabel>Dahoam is Dahoam</broadcastSeriesLabel>
 		<title>first title</title>
 		<teaserText>first teaser text</teaserText>
