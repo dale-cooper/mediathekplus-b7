@@ -1,4 +1,4 @@
-package de.br.multimedia.mediathekplus.b7.model;
+	package de.br.multimedia.mediathekplus.b7.model;
 
 import java.util.Date;
 import java.util.List;
@@ -27,8 +27,6 @@ public class Recording {
 	private String broadcastSeriesLabel;
 	@XmlElement(required=true)
 	private String title;
-	private String teaserText;
-	private String author;
 	private Date broadcastStartDate;
 	private Date broadcastEndDate;
 	private Date recordingStartDate;
@@ -64,21 +62,6 @@ public class Recording {
 		this.title = title;
 	}
 
-	public String getTeaserText() {
-		return teaserText;
-	}
-
-	public void setTeaserText(String teaserText) {
-		this.teaserText = teaserText;
-	}
-
-	public String getAuthor() {
-		return author;
-	}
-
-	public void setAuthor(String author) {
-		this.author = author;
-	}
 
 	public Date getBroadcastStartDate() {
 		return broadcastStartDate;

@@ -8,14 +8,21 @@ import javax.xml.bind.annotation.XmlAttribute;
 public class Order {
 	
 	@XmlAttribute
+	private String title;
+	@XmlAttribute(required=true)
 	private GeoprotectionTypeEnum geoprotection;
 	@XmlAttribute
 	private boolean deliverRecording;
 	@XmlAttribute
 	private boolean liveStreaming;
-	@XmlAttribute
+	@XmlAttribute(required=true)
+	private String vpsLabel;
+	@XmlAttribute(required=true)
+	private String channelId;
+	@XmlAttribute(required=true)
 	private String externalId;
 
+	
 	public Order() {
 	}
 
@@ -56,5 +63,29 @@ public class Order {
 
 	public void setGeoprotection(GeoprotectionTypeEnum geoprotection) {
 		this.geoprotection = geoprotection;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getVpsLabel() {
+		return vpsLabel;
+	}
+
+	public void setVpsLabel(String vpsLabel) {
+		this.vpsLabel = vpsLabel;
+	}
+
+	public String getChannelId() {
+		return channelId;
+	}
+
+	public void setChannelId(String channelId) {
+		this.channelId = channelId;
 	}
 }
