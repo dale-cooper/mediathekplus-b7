@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-  <xs:element name="liveStreamingOrderFeed" type="liveStreamingOrderFeed"/>
+  <xs:element name="recording" type="recording"/>
 
   <xs:element name="recordingFeed" type="recordingFeed"/>
 
@@ -9,23 +9,21 @@
 
   <xs:complexType name="recordingFeed">
     <xs:sequence>
-      <xs:element name="recording" type="recording" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element ref="recording" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
     <xs:attribute name="lastModified" type="xs:dateTime" use="required"/>
   </xs:complexType>
 
   <xs:complexType name="recording">
     <xs:sequence>
-      <xs:element name="broadcastSeriesLabel" type="xs:string" minOccurs="0"/>
+      <xs:element name="channelId" type="xs:string" minOccurs="0"/>
       <xs:element name="title" type="xs:string"/>
-      <xs:element name="teaserText" type="xs:string" minOccurs="0"/>
-      <xs:element name="author" type="xs:string" minOccurs="0"/>
       <xs:element name="broadcastStartDate" type="xs:dateTime" minOccurs="0"/>
       <xs:element name="broadcastEndDate" type="xs:dateTime" minOccurs="0"/>
-      <xs:element name="recordingStartDate" type="xs:dateTime" minOccurs="0"/>
-      <xs:element name="recordingEndDate" type="xs:dateTime" minOccurs="0"/>
       <xs:element name="trimmingChangedDate" type="xs:dateTime" minOccurs="0"/>
       <xs:element name="trimmingChangedByUser" type="xs:string" minOccurs="0"/>
+      <xs:element name="renderedFromMultiplePartsAt" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="geoprotection" type="geoprotectionTypeEnum" minOccurs="0"/>
       <xs:element name="files" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
@@ -33,9 +31,16 @@
           </xs:sequence>
         </xs:complexType>
       </xs:element>
+      <xs:element name="cuts" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="cut" type="recordingCut" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
     </xs:sequence>
     <xs:attribute name="recordingId" type="xs:long" use="required"/>
-    <xs:attribute name="externalId" type="xs:string" use="required"/>
+    <xs:attribute name="broadcastScheduleSystemId" type="xs:string" use="required"/>
     <xs:attribute name="delivered" type="xs:boolean" use="required"/>
   </xs:complexType>
 
@@ -43,17 +48,16 @@
     <xs:sequence/>
     <xs:attribute name="type" type="recordedFileTypeEnum"/>
     <xs:attribute name="path" type="xs:string"/>
+    <xs:attribute name="md5" type="xs:string"/>
   </xs:complexType>
 
-  <xs:complexType name="liveStreamingOrderFeed">
-    <xs:complexContent>
-      <xs:extension base="orderFeed">
-        <xs:sequence/>
-      </xs:extension>
-    </xs:complexContent>
+  <xs:complexType name="recordingCut">
+    <xs:sequence/>
+    <xs:attribute name="recordingStartDate" type="xs:dateTime" use="required"/>
+    <xs:attribute name="recordingEndDate" type="xs:dateTime" use="required"/>
   </xs:complexType>
 
-  <xs:complexType name="orderFeed" abstract="true">
+  <xs:complexType name="recordingOrderFeed">
     <xs:sequence>
       <xs:element name="order" type="order" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
@@ -62,19 +66,22 @@
 
   <xs:complexType name="order">
     <xs:sequence/>
-    <xs:attribute name="geoprotection" type="geoprotectionTypeEnum"/>
+    <xs:attribute name="title" type="xs:string"/>
+    <xs:attribute name="geoprotection" type="geoprotectionTypeEnum" use="required"/>
     <xs:attribute name="deliverRecording" type="xs:boolean" use="required"/>
-    <xs:attribute name="liveStreaming" type="xs:boolean" use="required"/>
-    <xs:attribute name="externalId" type="xs:string"/>
+    <xs:attribute name="vpsLabel" type="xs:string" use="required"/>
+    <xs:attribute name="channelId" type="xs:string" use="required"/>
+    <xs:attribute name="broadcastScheduleSystemId" type="xs:string" use="required"/>
   </xs:complexType>
 
-  <xs:complexType name="recordingOrderFeed">
-    <xs:complexContent>
-      <xs:extension base="orderFeed">
-        <xs:sequence/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
+  <xs:simpleType name="geoprotectionTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="WORLDWIDE"/>
+      <xs:enumeration value="EBU"/>
+      <xs:enumeration value="DACH"/>
+      <xs:enumeration value="GERMANY"/>
+    </xs:restriction>
+  </xs:simpleType>
 
   <xs:simpleType name="recordedFileTypeEnum">
     <xs:restriction base="xs:string">
@@ -87,15 +94,6 @@
       <xs:enumeration value="WEB_L_544"/>
       <xs:enumeration value="WEB_XL_720"/>
       <xs:enumeration value="WEB_XL_1080"/>
-    </xs:restriction>
-  </xs:simpleType>
-
-  <xs:simpleType name="geoprotectionTypeEnum">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="WORLDWIDE"/>
-      <xs:enumeration value="EBU"/>
-      <xs:enumeration value="DACH"/>
-      <xs:enumeration value="GERMANY"/>
     </xs:restriction>
   </xs:simpleType>
 </xs:schema>
