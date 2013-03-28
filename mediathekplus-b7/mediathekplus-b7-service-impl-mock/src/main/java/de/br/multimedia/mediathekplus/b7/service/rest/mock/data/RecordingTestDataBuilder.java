@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.apache.commons.codec.digest.DigestUtils;
+
 import de.br.multimedia.mediathekplus.b7.model.RecordedFile;
 import de.br.multimedia.mediathekplus.b7.model.RecordedFileTypeEnum;
 import de.br.multimedia.mediathekplus.b7.model.Recording;
@@ -50,14 +52,14 @@ public class RecordingTestDataBuilder {
 
 	private List<RecordedFile> createFiles(String name) {
 		List<RecordedFile> files = new ArrayList<RecordedFile>();
-		files.add(new RecordedFile(RecordedFileTypeEnum.PREVIEW, "/path/to/" + name + "/filename_P.mp4"));
-		files.add(new RecordedFile(RecordedFileTypeEnum.WEB_S_144, "/path/to/" + name + "/filename_0.mp4"));
-		files.add(new RecordedFile(RecordedFileTypeEnum.WEB_S_216, "/path/to/" + name + "/filename_A.mp4"));
-		files.add(new RecordedFile(RecordedFileTypeEnum.WEB_M_288, "/path/to/" + name + "/filename_B.mp4"));
-		files.add(new RecordedFile(RecordedFileTypeEnum.WEB_L_360, "/path/to/" + name + "/filename_E.mp4"));
-		files.add(new RecordedFile(RecordedFileTypeEnum.WEB_L_544, "/path/to/" + name + "/filename_C.mp4"));
-		files.add(new RecordedFile(RecordedFileTypeEnum.WEB_XL_720, "/path/to/" + name + "/filename_X.mp4"));
-		files.add(new RecordedFile(RecordedFileTypeEnum.WEB_XL_1080, "/path/to/" + name + "/filename_HD.mp4"));
+		files.add(new RecordedFile(RecordedFileTypeEnum.PREVIEW, "/path/to/" + name + "/filename_P.mp4", DigestUtils.md5Hex("filename_P")));
+		files.add(new RecordedFile(RecordedFileTypeEnum.WEB_S_144, "/path/to/" + name + "/filename_0.mp4", DigestUtils.md5Hex("filename_0")));
+		files.add(new RecordedFile(RecordedFileTypeEnum.WEB_S_216, "/path/to/" + name + "/filename_A.mp4", DigestUtils.md5Hex("filename_A")));
+		files.add(new RecordedFile(RecordedFileTypeEnum.WEB_M_288, "/path/to/" + name + "/filename_B.mp4", DigestUtils.md5Hex("filename_B")));
+		files.add(new RecordedFile(RecordedFileTypeEnum.WEB_L_360, "/path/to/" + name + "/filename_E.mp4", DigestUtils.md5Hex("filename_E")));
+		files.add(new RecordedFile(RecordedFileTypeEnum.WEB_L_544, "/path/to/" + name + "/filename_C.mp4", DigestUtils.md5Hex("filename_C")));
+		files.add(new RecordedFile(RecordedFileTypeEnum.WEB_XL_720, "/path/to/" + name + "/filename_X.mp4", DigestUtils.md5Hex("filename_X")));
+		files.add(new RecordedFile(RecordedFileTypeEnum.WEB_XL_1080, "/path/to/" + name + "/filename_HD.mp4", DigestUtils.md5Hex("filename_HD")));
 		return files;
 	}
 

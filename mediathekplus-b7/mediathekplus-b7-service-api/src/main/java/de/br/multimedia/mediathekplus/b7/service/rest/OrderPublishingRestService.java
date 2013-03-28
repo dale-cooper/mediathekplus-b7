@@ -13,7 +13,6 @@ public abstract class OrderPublishingRestService implements OrderPublishingServi
 
 	public static final String PATH_ORDERS ="orders";
 	public static final String SUBPATH_RECORDING_ORDERS ="recordingFeed";
-	public static final String SUBPATH_STREAMING_ORDERS ="liveStreamingFeed";
 	
 	@GET
 	@Path(SUBPATH_RECORDING_ORDERS)

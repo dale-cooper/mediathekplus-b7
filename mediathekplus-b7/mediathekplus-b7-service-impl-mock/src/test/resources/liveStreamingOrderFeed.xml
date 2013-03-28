@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<liveStreamingOrderFeed lastModified="2013-01-03T14:20:10.157+01:00">
-	<order externalId="dmb-first" liveStreaming="true" deliverRecording="true" geoprotection="DACH" />
-	<order externalId="dmb-second" liveStreaming="false" deliverRecording="true" geoprotection="WORLDWIDE" />
-	<order externalId="dmb-third" liveStreaming="true" deliverRecording="true" geoprotection="WORLDWIDE" />
-	<order externalId="dmb-fourth" liveStreaming="true" deliverRecording="true" geoprotection="GERMANY" />
-	<order externalId="dmb-fifth" liveStreaming="true" deliverRecording="false" geoprotection="EBU" />
-	<order externalId="dmb-sixth" liveStreaming="false" deliverRecording="false" />
-</liveStreamingOrderFeed>

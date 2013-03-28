@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<recordingOrderFeed lastModified="2013-01-03T14:20:33.448+01:00">
-	<order externalId="dmb-first" liveStreaming="true" deliverRecording="true" geoprotection="DACH" />
-	<order externalId="dmb-second" liveStreaming="false" deliverRecording="true" geoprotection="WORLDWIDE" />
-	<order externalId="dmb-third" liveStreaming="true" deliverRecording="true" geoprotection="WORLDWIDE" />
-	<order externalId="dmb-fourth" liveStreaming="true" deliverRecording="true" geoprotection="GERMANY" />
+<recordingOrderFeed lastModified="2013-03-28T16:09:15.453+01:00">
+	<order broadcastScheduleSystemId="dmb-first" deliverRecording="true" geoprotection="DACH" />
+	<order broadcastScheduleSystemId="dmb-second" deliverRecording="true" geoprotection="WORLDWIDE" />
+	<order broadcastScheduleSystemId="dmb-third" deliverRecording="true" geoprotection="WORLDWIDE" />
+	<order broadcastScheduleSystemId="dmb-fourth" deliverRecording="true" geoprotection="GERMANY" />
 </recordingOrderFeed>
