@@ -1,39 +1,29 @@
 package de.br.multimedia.mediathekplus.b7.service.rest.mock;
 
-import static org.hamcrest.MatcherAssert.*;
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.not;
+import static org.hamcrest.Matchers.nullValue;
 
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
-import com.sun.grizzly.http.SelectorThread;
-import com.sun.jersey.api.container.grizzly.GrizzlyServerFactory;
+import com.sun.jersey.test.framework.JerseyTest;
 
 import de.br.multimedia.mediathekplus.b7.client.RecordingDeliveryRestServiceClient;
 import de.br.multimedia.mediathekplus.b7.model.Recording;
 import de.br.multimedia.mediathekplus.b7.model.RecordingFeed;
 import de.br.multimedia.mediathekplus.b7.service.RecordingFilterEnum;
 
-public class MockedRecordingDeliveryServiceTest {
+public class MockedRecordingDeliveryServiceTest extends JerseyTest  {
 
-	private final String serverUrl = "http://localhost:4434";
-	private SelectorThread server;
-
-	@BeforeClass
-	public void startServer() throws Exception {
-		server = GrizzlyServerFactory.create(serverUrl);
-	}
-
-	@AfterClass
-	public void stopServer() throws Exception {
-		server.stopEndpoint();
+	public MockedRecordingDeliveryServiceTest() {
+		super("de.br.multimedia.mediathekplus.b7.service.rest.mock");
 	}
 
 	@Test
 	public void exerciseDeliveryOfOneRecoding() throws Exception {
 
-		final RecordingDeliveryRestServiceClient client = new RecordingDeliveryRestServiceClient(serverUrl);
+		final RecordingDeliveryRestServiceClient client = new RecordingDeliveryRestServiceClient(super.getBaseURI().toString());
 
 		RecordingFeed feed = client.getRecordings(RecordingFilterEnum.UNDELIVERED);
 

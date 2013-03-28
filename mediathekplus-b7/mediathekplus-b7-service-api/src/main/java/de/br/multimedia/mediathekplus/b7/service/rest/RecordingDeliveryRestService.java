@@ -12,7 +12,7 @@ import de.br.multimedia.mediathekplus.b7.model.RecordingFeed;
 import de.br.multimedia.mediathekplus.b7.service.RecordingDeliveryService;
 import de.br.multimedia.mediathekplus.b7.service.RecordingFilterEnum;
 
-@Path(RecordingDeliveryRestService.PATH_RECORDINGS)
+
 @Produces({ "application/xml" })
 public abstract class RecordingDeliveryRestService implements RecordingDeliveryService {
 

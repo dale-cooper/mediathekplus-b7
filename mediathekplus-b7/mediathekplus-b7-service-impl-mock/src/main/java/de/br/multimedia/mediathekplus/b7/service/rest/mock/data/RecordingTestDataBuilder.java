@@ -7,6 +7,7 @@ import java.util.List;
 import de.br.multimedia.mediathekplus.b7.model.RecordedFile;
 import de.br.multimedia.mediathekplus.b7.model.RecordedFileTypeEnum;
 import de.br.multimedia.mediathekplus.b7.model.Recording;
+import de.br.multimedia.mediathekplus.b7.model.RecordingCut;
 
 public class RecordingTestDataBuilder {
 
@@ -23,15 +24,17 @@ public class RecordingTestDataBuilder {
 	private Recording createRecording(String name) {
 		Recording recording = new Recording();
 		recording.setRecordingId(deriveId(name));
-		recording.setExternalId("dmb-" + name);
-		recording.setPartNumber(1);
+		recording.setBroadcastScheduleSystemId("dmb-" + name);
 		recording.setChannelId("12345");
-		recording.setBroadcastSeriesLabel("Dahoam is Dahoam");
 		recording.setTitle(name + " title");
 		recording.setBroadcastEndDate(new Date());
 		recording.setBroadcastStartDate(new Date());
-		recording.setRecordingEndDate(new Date());
-		recording.setRecordingStartDate(new Date());
+		
+		RecordingCut cut = new RecordingCut();
+		cut.setRecordingEndDate(new Date());
+		cut.setRecordingStartDate(new Date());
+		recording.getCuts().add(cut );
+		
 		recording.setTrimmingChangedByUser("trimming-user");
 		recording.setTrimmingChangedDate(new Date());
 		recording.setFiles(createFiles(name));
@@ -51,6 +54,7 @@ public class RecordingTestDataBuilder {
 		files.add(new RecordedFile(RecordedFileTypeEnum.WEB_S_144, "/path/to/" + name + "/filename_0.mp4"));
 		files.add(new RecordedFile(RecordedFileTypeEnum.WEB_S_216, "/path/to/" + name + "/filename_A.mp4"));
 		files.add(new RecordedFile(RecordedFileTypeEnum.WEB_M_288, "/path/to/" + name + "/filename_B.mp4"));
+		files.add(new RecordedFile(RecordedFileTypeEnum.WEB_L_360, "/path/to/" + name + "/filename_E.mp4"));
 		files.add(new RecordedFile(RecordedFileTypeEnum.WEB_L_544, "/path/to/" + name + "/filename_C.mp4"));
 		files.add(new RecordedFile(RecordedFileTypeEnum.WEB_XL_720, "/path/to/" + name + "/filename_X.mp4"));
 		files.add(new RecordedFile(RecordedFileTypeEnum.WEB_XL_1080, "/path/to/" + name + "/filename_HD.mp4"));

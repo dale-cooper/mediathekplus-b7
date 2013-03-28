@@ -13,41 +13,23 @@ public class Order {
 	private GeoprotectionTypeEnum geoprotection;
 	@XmlAttribute
 	private boolean deliverRecording;
-	@XmlAttribute
-	private boolean liveStreaming;
 	@XmlAttribute(required=true)
 	private String vpsLabel;
 	@XmlAttribute(required=true)
 	private String channelId;
 	@XmlAttribute(required=true)
-	private String externalId;
+	private String broadcastScheduleSystemId;
 
 	
 	public Order() {
 	}
 
-	public Order(String externalId, boolean liveStreaming, boolean deliverRecording, GeoprotectionTypeEnum geoprotection) {
-		this.externalId = externalId;
-		this.liveStreaming = liveStreaming;
+	public Order(String broadcastScheduleSystemId, boolean deliverRecording, GeoprotectionTypeEnum geoprotection) {
+		this.broadcastScheduleSystemId = broadcastScheduleSystemId;
 		this.deliverRecording = deliverRecording;
 		this.geoprotection = geoprotection;
 	}
 
-	public String getExternalId() {
-		return externalId;
-	}
-
-	public void setExternalId(String externalId) {
-		this.externalId = externalId;
-	}
-
-	public boolean isLiveStreaming() {
-		return liveStreaming;
-	}
-
-	public void setLiveStreaming(boolean liveStreaming) {
-		this.liveStreaming = liveStreaming;
-	}
 
 	public boolean isDeliverRecording() {
 		return deliverRecording;
@@ -87,5 +69,13 @@ public class Order {
 
 	public void setChannelId(String channelId) {
 		this.channelId = channelId;
+	}
+
+	public String getBroadcastScheduleSystemId() {
+		return broadcastScheduleSystemId;
+	}
+
+	public void setBroadcastScheduleSystemId(String broadcastScheduleSystemId) {
+		this.broadcastScheduleSystemId = broadcastScheduleSystemId;
 	}
 }

@@ -15,12 +15,10 @@
 		<dependency>
 			<groupId>de.br.multimedia.mediathekplus.b7</groupId>
 			<artifactId>mediathekplus-b7-service-api</artifactId>
-			<version>${project.parent.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.sun.jersey</groupId>
 			<artifactId>jersey-client</artifactId>
-			<version>${dependency.jersey.version}</version>
 		</dependency>
 	</dependencies>
 </project>

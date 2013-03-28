@@ -19,11 +19,13 @@ public class RecordingDeliveryRestServiceClient implements RecordingDeliveryServ
 
 	public RecordingDeliveryRestServiceClient(final String baseUri) {
 		this.restClient = Client.create();
-		this.recordingsUri = baseUri + "/" + RecordingDeliveryRestService.PATH_RECORDINGS;
-		this.singleRecordingUri = baseUri + "/" + RecordingDeliveryRestService.PATH_RECORDINGS + "/" + RecordingDeliveryRestService.SUBPATH_GET_RECORDING;
-		this.updateRecordingStatusUri = baseUri + "/" + RecordingDeliveryRestService.PATH_RECORDINGS + "/" + RecordingDeliveryRestService.SUBPATH_UPDATE_RECORDING_STATUS;
+		final String base = baseUri.endsWith("/") ? baseUri.substring(0, baseUri.length()-1) : baseUri;
+		this.recordingsUri = base + "/" + RecordingDeliveryRestService.PATH_RECORDINGS;
+		this.singleRecordingUri = base + "/" + RecordingDeliveryRestService.PATH_RECORDINGS + "/" + RecordingDeliveryRestService.SUBPATH_GET_RECORDING;
+		this.updateRecordingStatusUri = base + "/" + RecordingDeliveryRestService.PATH_RECORDINGS + "/" + RecordingDeliveryRestService.SUBPATH_UPDATE_RECORDING_STATUS;
 		this.recordingIdParam = "{" + RecordingDeliveryRestService.PATH_PARAM_RECORDING_ID + "}";
 	}
+
 
 	@Override
 	public RecordingFeed getRecordings(RecordingFilterEnum filter) {

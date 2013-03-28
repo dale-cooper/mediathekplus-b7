@@ -20,7 +20,7 @@ import de.br.multimedia.mediathekplus.b7.service.RecordingFilterEnum;
 import de.br.multimedia.mediathekplus.b7.service.rest.RecordingDeliveryRestService;
 import de.br.multimedia.mediathekplus.b7.service.rest.mock.data.RecordingTestDataBuilder;
 
-@Path("recordings")
+@Path(RecordingDeliveryRestService.PATH_RECORDINGS)
 public class MockedRecordingDeliveryService extends RecordingDeliveryRestService {
 
 	private static final Logger log = LoggerFactory.getLogger(MockedRecordingDeliveryService.class);
