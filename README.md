@@ -22,7 +22,7 @@ Der Mock-Server wird so gestartet:
     $ cd mediathekplus-b7-service-impl-mock
     $ mvn exec:exec
 
-Er ist auf den Port 4499 konfiguriert. Das kann man aber in der Datei ./mediathekplus-b7-service-impl-mock/pom.xml ändern.
+Er ist auf den Port 9997 konfiguriert. Das kann man aber in der Datei ./mediathekplus-b7-service-impl-mock/pom.xml ändern.
 Die Pfade bitte aus der separaten Doku entnehmen.
 
 * Client-Implementierung: /mediathekplus-b7-client/src/main/java/de/br/multimedia/mediathekplus/b7/client/RecordingDeliveryRestServiceClient.java
